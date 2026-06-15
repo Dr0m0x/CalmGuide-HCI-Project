@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmGuide - Adaptive Wellness Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <h1>CalmGuide</h1>
+            <p>An Adaptive Wellness Chatbot</p>
+        </header>
+
+        <div class="chat-window" id="chat-window">
+            <div class="message bot">
+                Hi, I'm CalmGuide. I'm here to support your wellness journey.
+                Tell me how you're feeling, or ask me a question about
+                stress, anxiety, or mindfulness.
+            </div>
+        </div>
+
+        <div class="stats-bar" id="stats-bar">
+            Stress signals: <span id="stress-count">0</span> |
+            Educational questions: <span id="edu-count">0</span> |
+            Positive moments: <span id="positive-count">0</span>
+        </div>
+
+        <form id="chat-form" class="chat-form">
+            <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off" required>
+            <button type="submit">Send</button>
+            <button type="button" id="reset-btn">Reset</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
